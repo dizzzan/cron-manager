@@ -1,0 +1,60 @@
+{
+  "schedules": [
+    {
+      "name": "behavior-pattern-finder",
+      "schedule": "0 2 * * *",
+      "app": "reliachart",
+      "command": [
+        "./reliachart",
+        "jobs",
+        "run",
+        "behavior_pattern_finder",
+        "--tenant",
+        "all"
+      ],
+      "region": "iad"
+    },
+    {
+      "name": "goal-focus-recommender",
+      "schedule": "0 3 * * *",
+      "app": "reliachart",
+      "command": [
+        "./reliachart",
+        "jobs",
+        "run",
+        "goal_focus_recommender",
+        "--tenant",
+        "all"
+      ],
+      "region": "iad"
+    },
+    {
+      "name": "supervisor-digest-daily",
+      "schedule": "0 4 * * *",
+      "app": "reliachart",
+      "command": [
+        "./reliachart",
+        "jobs",
+        "run",
+        "supervisor_digest_daily",
+        "--tenant",
+        "all"
+      ],
+      "region": "iad"
+    },
+    {
+      "name": "supervisor-digest-weekly",
+      "schedule": "0 5 * * 1",
+      "app": "reliachart",
+      "command": [
+        "./reliachart",
+        "jobs",
+        "run",
+        "supervisor_digest_weekly",
+        "--tenant",
+        "all"
+      ],
+      "region": "iad"
+    }
+  ]
+}
